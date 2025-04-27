@@ -1,3 +1,8 @@
 streamlit
-python-dotenv
 openai
+python-dotenv
+langchain
+langchain-community
+langchain-openai
+pymupdf
+faiss-cpu
