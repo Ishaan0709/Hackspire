@@ -234,12 +234,10 @@ def main():
                 st.subheader("📜 Conversation History")
                 for speaker, message in st.session_state.conversation:
                     div_class = "patient-message" if speaker == "Patient" else "doctor-message"
-                    st.markdown(f"""
-                    <div class="{div_class}">
-                        <strong>{speaker}:</strong><br>
-                        {message.replace('\n', '<br>')}
-                    </div>
-                    """, unsafe_allow_html=True)
+                st.markdown("""<div class="{}"><strong>{}:</strong><br>{}</div>
+                            """.format(div_class, speaker, message.replace('\n', '<br>')), 
+                            unsafe_allow_html=True)
+
                 
                 st.markdown("---")
                 if st.button("✅ End Consultation & Generate Summary", type="primary"):
