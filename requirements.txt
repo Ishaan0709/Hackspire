@@ -1,8 +1,1 @@
-streamlit
-openai
-python-dotenv
-langchain
-langchain-community
-langchain-openai
-pymupdf
-faiss-cpu
+
